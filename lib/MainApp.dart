@@ -15,61 +15,58 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData temaClaro = ThemeData(
-      brightness: Brightness.light,
-      scaffoldBackgroundColor: Colors.white,
-      primaryColor: Colors.amber,
-      appBarTheme: AppBarTheme(
-        backgroundColor: Colors.amber,
-        foregroundColor: Colors.black,
-        elevation: 0,
-      ),
-      textTheme: const TextTheme(
-        bodyLarge: TextStyle(color: Colors.black),
-        bodyMedium: TextStyle(color: Colors.black),
-        titleLarge: TextStyle(color: Colors.black),
-        labelLarge: TextStyle(color: Colors.black),
-      ),
-      iconTheme: const IconThemeData(
-        color: Colors.black,
-      ),
-      colorScheme: ColorScheme.light(
-        primary: Colors.amber,
-        onPrimary: Colors.black,
-        background: Colors.white,
-        onBackground: Colors.black,
-        surface: Colors.white,
-        onSurface: Colors.black,
-      ),
-    );
-    final ThemeData temaOscuro = ThemeData.dark().copyWith(
-      scaffoldBackgroundColor: const Color(0xFF121212), // Fondo oscuro
-      primaryColor: Colors.amber, // Color primario ámbar
+   final ThemeData temaClaro = ThemeData(
+  brightness: Brightness.light,
+  scaffoldBackgroundColor: Colors.pink.shade50,
+  primaryColor: Colors.pinkAccent,
+  appBarTheme: AppBarTheme(
+    backgroundColor: Colors.pinkAccent,
+    foregroundColor: Colors.white,
+    elevation: 0,
+  ),
+  textTheme: const TextTheme(
+    bodyLarge: TextStyle(color: Colors.black),
+    bodyMedium: TextStyle(color: Colors.black),
+    titleLarge: TextStyle(color: Colors.black),
+    labelLarge: TextStyle(color: Colors.black),
+  ),
+  iconTheme: const IconThemeData(
+    color: Colors.black,
+  ),
+  colorScheme: ColorScheme.light(
+    primary: Colors.pinkAccent,
+    onPrimary: Colors.pink,
+    background: Colors.pink.shade100,
+    onBackground: Colors.black,
+    surface: Colors.pink.shade50,
+    onSurface: Colors.black,
+  ),
+);
 
-      appBarTheme: const AppBarTheme(
-        backgroundColor: Colors.amber, // AppBar ámbar
-        foregroundColor: Colors.black, // Texto e íconos en negro sobre ámbar
-        elevation: 0,
+final ThemeData temaOscuro = ThemeData.dark().copyWith(
+  scaffoldBackgroundColor: const Color(0xFF0A1B2F), // azul celeste oscuro personalizado
+  primaryColor: Colors.cyanAccent,
+  appBarTheme: AppBarTheme(
+    backgroundColor: Colors.cyan.shade700,
+    foregroundColor: Colors.white,
+    elevation: 0,
+  ),
+  iconTheme: const IconThemeData(
+    color: Colors.white,
+  ),
+  textTheme: ThemeData.dark().textTheme.apply(
+        bodyColor: Colors.white,
+        displayColor: Colors.white,
       ),
-
-      iconTheme: const IconThemeData(
-        color: Colors.white,
-      ),
-
-      textTheme: ThemeData.dark().textTheme.apply(
-            bodyColor: Colors.white,
-            displayColor: Colors.white,
-          ),
-
-      colorScheme: const ColorScheme.dark(
-        primary: Colors.amber,
-        onPrimary: Colors.black,
-        background: Color(0xFF121212),
-        onBackground: Colors.white,
-        surface: Color(0xFF1E1E1E),
-        onSurface: Colors.white,
-      ),
-    );
+  colorScheme: ColorScheme.dark(
+    primary: Colors.cyanAccent,
+    onPrimary: Colors.white,
+    background: const Color(0xFF0A1B2F),
+    onBackground: Colors.white,
+    surface: const Color(0xFF123049),
+    onSurface: Colors.white,
+  ),
+);
 
     return MultiProvider(
       providers: [
